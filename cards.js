@@ -1,0 +1,35 @@
+const chanceCards = [
+"Avancez jusqu'à la compagnie de service publique la plus proche. Si elle n'appartient à personne, vous pouvez l'acheter auprès de la banque. Si elle appartient déjà à un autre joueur, lancez les dés et payez le montant du total de vos dés multiplié par 10.",
+"Avancez jusqu'à la gare la plus proche. Si elle n'appartient à personne, vous pouvez l'acheter auprès de la banque. Si elle appartient déjà à un autre joueur, vous devez lui payer deux fois le loyer demandé.",
+"Vous faites des réparations sur toutes vous propriétés: versez 25M pour chaque maison, 100M pour chaque hôtel, 100M pour chaque gratte-ciel et 25M pour chaque dépôt ferroviaire que vous possédez.",
+"Avancez jusqu'à la gare la plus proche. Si elle n'appartient à personne, vous pouvez l'acheter auprès de la banque. Si elle appartient déjà à un autre joueur, vous devez lui payer deux fois le loyer demandé.",
+"Allez en prison. Avancez tout droit en prison. Ne passez pas par la case départ. Ne recevez pas 200M",
+"Avancez Boulevard de la Villette. Si vous passez par la case départ, recevez 200M.",
+"Rendez-vous Avenue Henri Martin. Si vous passez par la case départ, recevez 200M.",
+"Aller à la gare de Lyon. Si vous passez par la case départ, recevez 200M",
+"Avancez jusqu'à la case départ. Recevez 200M.",
+"Votre immeuble et votre prêt rapportent. Vous devez toucher 150M.",
+"Vous avez été élu président du conseil d'administration. Versez 50M à chaque joueur.",
+"Vous êtes libéré de prison. Cette carte peut être conservée jusqu'à ce qu'elle soit utilisée ou vendue.",
+"La banque vous verse un dividende de 50M.",
+"Reculez de trois cases.",
+"Amende pour excès de vitesse: payez 15M.",
+"Rendez-vous Rue de la Paix."
+];
+const communityCards = [
+"Vous devez faire des travauxsur vous propriétés: versez 40M par maison, 115M par hôtel, 115M par gratte-ciel et 25M par dépôt ferroviaire que vous possédez.",
+"Erreur de la banque en votre faveur. Recevez 200M.",
+"Allez en prison. Ne passez pas par la case départ. Ne recevez pas 200M.",
+"C'est votre anniversaire: chaque joueur doit vous donner 10M.",
+"Vous avez gagné le deuxième prix de beauté. Recevez 10M.",
+"Les impôts vous remboursent 20M.",
+"La vente de votre stock vous rapporte 50M.",
+"Frais de scolarité. Payez 50M.",
+"Frais d'hospitalisation. Payez 100M.",
+"Avancez jusqu'à la case départ. Recevez 200M.",
+"Commission d'expert immobilier. Recevez 25M.",
+"Visite chez le médecin: Payez 50M.",
+"Votre placement vous rapporte. Recevez 100M.",
+"Votre assurance vie vous rapporte 100M.",
+"Vous héritez de 100M."
+];

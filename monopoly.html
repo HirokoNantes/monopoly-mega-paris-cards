@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset = "utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Monopoly méga Paris</title>
+    <style> 
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url(mrmonopoly.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+        }
+        p{
+            font-size: 20px;
+            font-weight: bold;
+            color: rgb(111, 218, 69);
+            user-select: none;
+        }
+        div{
+            width: 90vw;
+            max-width: 460px;
+            height: auto;            
+            aspect-ratio: 460 / 250;  
+            border: 1px solid #aaa;
+            padding: 20px;
+            margin: 40px;
+            background-color: white;
+        } 
+        #chance, #community{
+            cursor: pointer;
+        }
+        #chanceText, #communityText{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 30px; 
+            overflow-wrap: break-word;
+            user-select: none;  
+        }
+        #chanceText{
+            background-color: rgba(245, 187, 187, 0.7);
+        }
+        #communityText{
+            background-color: rgba(175, 174, 245, 0.7);
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <p>Clique sur la carte que tu veux</p>
+    <div id="chance"><img src="chance.jpg" alt="" /></div>
+    <div id="chanceText"></div>
+    <div id="community"><img src="community.jpg" alt="" /></div>
+    <div id="communityText"></div>
+
+    <script src="cards.js"></script>
+    <script>
+        const chance   = document.getElementById("chance");
+        const community = document.getElementById("community");
+        const chanceText   = document.getElementById("chanceText");
+        const communityText = document.getElementById("communityText");
+
+        function random(max){
+            return Math.floor(Math.random()*max);
+        }
+
+        function shuffle(array){
+            for(i=array.length; i>0; i--){
+                let r = random(i);
+                let tmp = array[i-1];
+                array[i-1] = array[r]
+                array[r] = tmp;
+            }
+        }
+
+        const originalChanceCards = chanceCards.slice();
+        const originalCommunityCards = communityCards.slice();
+
+        let currentChanceCards = chanceCards.slice();
+        let currentCommunityCards = communityCards.slice();
+
+        shuffle(currentChanceCards);
+        shuffle(currentCommunityCards);
+
+        chance.addEventListener("click",()=>{
+            if(currentChanceCards.length === 0){
+                currentChanceCards = originalChanceCards.slice();
+                shuffle(currentChanceCards);
+            }
+            let text = currentChanceCards.pop();
+            chanceText.innerText = text;
+        });
+        
+        community.addEventListener("click",()=>{
+            if(currentCommunityCards.length === 0){
+                currentCommunityCards = originalCommunityCards.slice();
+                shuffle(currentCommunityCards);
+            }
+            let text = currentCommunityCards.pop();
+            communityText.innerText = text;
+        });
+    </script>
+</body>
+</html>
